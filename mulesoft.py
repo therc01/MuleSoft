@@ -25,3 +25,17 @@ val = [
   ('KABIR SINGH', 'SHAHID KAPOOR', 'KIARA ADVANI', 'SANDEEP REDDY VANGA',2019)
 ]
 mycursor.executemany(sql, val)
+mycursor.execute("SELECT * FROM movies")
+
+result = mycursor.fetchall()
+
+for row in result:
+    print(row)
+
+print("")
+mycursor.execute("SELECT * FROM movies WHERE actress = 'ALIA BHATT';")
+
+result = mycursor.fetchall()
+
+for row in result:
+    print(row)
